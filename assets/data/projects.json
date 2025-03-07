@@ -1,14 +1,14 @@
-[
-    {
-        "title": "3D Visualization Platform",
-        "description": "Interactive 3D visualization system with WebGL",
-        "tech": ["Three.js", "GSAP", "WebGL"],
-        "link": "#"
-    },
-    {
-        "title": "AI Security System",
-        "description": "Machine learning-based threat detection",
-        "tech": ["Python", "TensorFlow", "AWS"],
-        "link": "#"
-    }
-]
+{
+    "projects": [
+      {
+        "title": "Project 1",
+        "description": "Description of project 1",
+        "link": "http://example.com/project1"
+      },
+      {
+        "title": "Project 2",
+        "description": "Description of project 2",
+        "link": "http://example.com/project2"
+      }
+    ]
+  }
