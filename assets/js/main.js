@@ -1,44 +1,50 @@
-import { initThreeScene } from './threeConfig.js';
+import { ThreeScene } from './threeConfig.js';
+import { CustomCursor } from './components/cursor.js';
+import { ProjectCards } from './components/projects.js';
 
-document.addEventListener('DOMContentLoaded', async () => {
-    const canvas = document.querySelector('#three-canvas');
-    
-    try {
-        // Initialize Three.js scene
-        const threeScene = initThreeScene(canvas);
-
-        // Initialize custom cursor
-        const cursor = document.querySelector('.custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        });
-
-        // Add hover effects
-        document.querySelectorAll('a, button').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(1.5)';
-            });
-            element.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-            });
-        });
-
-        // Initialize content loader
-        const loadContent = async (type) => {
-            try {
-                const response = await fetch(`./assets/data/${type}.json`);
-                return await response.json();
-            } catch (error) {
-                console.error(`Error loading ${type}:`, error);
-                return null;
-            }
-        };
-
-        // Load and display content
-        const projects = await loadContent('projects');
-        console.log('Loaded projects:', projects);
-
-    } catch (error) {
-        console.error('Initialization error:', error);
+class App {
+    constructor() {
+        this.initThree();
+        this.initComponents();
+        this.initEventListeners();
     }
-});
+
+    initThree() {
+        this.threeScene = new ThreeScene();
+        window.addEventListener('resize', () => this.threeScene.onWindowResize());
+    }
+
+    initComponents() {
+        this.cursor = new CustomCursor();
+        this.projects = new ProjectCards();
+    }
+
+    initEventListeners() {
+        // Magnetic buttons
+        document.querySelectorAll('[data-magnetic]').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                
+                gsap.to(btn, {
+                    x: x * 20,
+                    y: y * 20,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                gsap.to(btn, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+            });
+        });
+    }
+}
+
+new App();
