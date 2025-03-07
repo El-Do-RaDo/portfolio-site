@@ -79,44 +79,44 @@ class App {
         });
 
         // Fetch and display project cards
-        fetch('./assets/data/projects.json')
-            .then(response => {
-                console.log('Fetch response:', response);
-                return response.json();
-            })
-            .then(data => {
-                console.log('Project data:', data);
-                const projectsGrid = document.querySelector('.projects__grid');
-                if (data.projects) {
-                    data.projects.forEach(project => {
-                        const card = document.createElement('div');
-                        card.classList.add('card');
-                        card.innerHTML = `
-                            <h3>${project.title}</h3>
-                            <p>${project.description}</p>
-                            <a href="${project.link}" target="_blank">View Project</a>
-                        `;
-                        projectsGrid.appendChild(card);
-                    });
+fetch('./assets/data/projects.json')
+.then(response => {
+    console.log('Fetch response:', response);
+    return response.json();
+})
+.then(data => {
+    console.log('Project data:', data);
+    const projectsGrid = document.querySelector('.projects__grid');
+    if (data.projects) {
+        data.projects.forEach(project => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = `
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <a href="${project.link}" target="_blank">View Project</a>
+            `;
+            projectsGrid.appendChild(card);
+        });
 
-                    // Animate cards
-                    gsap.from('.card', {
-                        duration: 1,
-                        y: 50,
-                        opacity: 0,
-                        stagger: 0.2,
-                        ease: 'power3.out',
-                        scrollTrigger: {
-                            trigger: '.projects__grid',
-                            start: 'top 80%',
-                            toggleActions: 'play none none reverse'
-                        }
-                    });
-                } else {
-                    console.error('Projects data is not in the expected format.');
-                }
-            })
-            .catch(error => console.error('Error loading projects:', error));
+        // Animate cards
+        gsap.from('.card', {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.projects__grid',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    } else {
+        console.error('Projects data is not in the expected format.');
+    }
+})
+.catch(error => console.error('Error loading projects:', error));
 
         // Initialize Hammer.js for swipe detection
         const projectsGrid = document.querySelector('.projects__grid');
