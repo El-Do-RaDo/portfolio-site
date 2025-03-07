@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/vendor/aos.css">
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     
 
     <!-- Theme Style -->
@@ -108,7 +109,7 @@
               
             <div class="col-md-7 mx-auto text-center">
               <h1 class="heading gsap-reveal-hero">Unfold</h1>
-              <h2 class="subheading gsap-reveal-hero">I’m Glenn Chapman Hoyer A Product Designer Based In San Francisco</h2>
+              <h2 class="subheading gsap-reveal-hero">I'm Glenn Chapman Hoyer A Product Designer Based In San Francisco</h2>
             </div>
 
           </div>
@@ -701,6 +702,23 @@
 
     <script src="js/scripts-dist.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('#posts', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    });
+    </script>
 
   </body>
 </html>
