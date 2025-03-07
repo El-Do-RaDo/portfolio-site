@@ -44,3 +44,16 @@ $.fn.commentCards = function() {
 };
 
 $('.cards').commentCards();
+
+// Cursor-following effect
+$(document).ready(function() {
+    const cursor = $('<div class="cursor"></div>');
+    $('body').append(cursor);
+
+    $(document).on('mousemove', function(e) {
+        cursor.css({
+            left: e.pageX + 'px',
+            top: e.pageY + 'px'
+        });
+    });
+});
