@@ -6,6 +6,7 @@
     <title>Portfolio Site</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body data-spy="scroll" data-target="#navbar" data-offset="70">
     <!-- Navigation Bar -->
@@ -48,10 +49,36 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="parallax section">
+    <!-- Portfolio Swiper Section -->
+    <section id="portfolio" class="section">
         <div class="container">
-            <h2>Services</h2>
+            <h2>Portfolio</h2>
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="http://marveltheme.com/tf/html/appai/appai/img/app-screenshots/10.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="http://marveltheme.com/tf/html/appai/appai/img/app-screenshots/11.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="http://marveltheme.com/tf/html/appai/appai/img/app-screenshots/12.jpg" alt="">
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>Testimonials</h2>
             <ul class="cards">
                 <li class="card card--current">
                     <h1>Comment Card 1</h1>
@@ -85,5 +112,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

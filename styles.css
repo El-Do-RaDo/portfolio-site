@@ -130,3 +130,14 @@ h1 { margin: 0; }
     transition: transform 0.1s ease;
     z-index: 1000;
 }
+
+.swiper-container {
+    width: 750px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 0 auto; /* Center the swiper */
+}
+
+.swiper-slide {
+    width: 300px;
+}
