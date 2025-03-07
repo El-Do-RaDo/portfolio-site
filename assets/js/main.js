@@ -10,28 +10,43 @@ class App {
     }
 
     initThree() {
-        // Initialize Three.js scene directly
+        // Initialize Three.js scene for floating objects
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('.webgl') });
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
 
-        // Create a cube
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
+        // Create floating objects
+        const objects = [];
+        for (let i = 0; i < 10; i++) {
+            const geometry = new THREE.SphereGeometry(0.5, 32, 32);
+            const material = new THREE.MeshBasicMaterial({ color: Math.random() * 0xffffff });
+            const sphere = new THREE.Mesh(geometry, material);
+            sphere.position.set(Math.random() * 10 - 5, Math.random() * 10 - 5, Math.random() * 10 - 5);
+            scene.add(sphere);
+            objects.push(sphere);
+        }
 
-        camera.position.z = 5;
+        camera.position.z = 15;
 
         function animate() {
             requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
+            objects.forEach(obj => {
+                obj.rotation.x += 0.01;
+                obj.rotation.y += 0.01;
+            });
             renderer.render(scene, camera);
         }
         animate();
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            objects.forEach((obj, index) => {
+                obj.position.y = Math.sin(scrollY * 0.001 + index) * 5;
+            });
+        });
     }
 
     initComponents() {
