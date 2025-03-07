@@ -1612,6 +1612,10 @@ figure.dotted-bg:before {
   color: #fff;
 }
 
+.contact-info-v1 .contact-info-val a {
+  color: #fff;
+}
+
 .portfolio-single-inner .heading-portfolio-single-h2 {
   margin-bottom: 40px;
   font-size: 50px;
@@ -2094,4 +2098,27 @@ span.error {
 
 .gsap-reveal-img .reveal-wrap .reveal-content .portfolio-item-content h3 {
   margin-bottom: 10px;
+}
+
+#posts {
+  perspective: 1000px;
+}
+
+#posts .item {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+#posts .item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#posts .item .overlay {
+  transition: opacity 0.3s ease;
+}
+
+#posts .item:hover .overlay {
+  opacity: 0.8;
 }
