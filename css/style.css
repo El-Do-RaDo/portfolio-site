@@ -2101,13 +2101,36 @@ span.error {
 }
 
 #posts {
-  perspective: 1000px;
+  position: relative;
+  height: 400px; /* Adjust height as needed */
 }
 
 #posts .item {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;
+}
+
+#posts .item:nth-child(1) {
+  z-index: 4;
+}
+
+#posts .item:nth-child(2) {
+  z-index: 3;
+  transform: translateY(10px);
+}
+
+#posts .item:nth-child(3) {
+  z-index: 2;
+  transform: translateY(20px);
+}
+
+#posts .item:nth-child(4) {
+  z-index: 1;
+  transform: translateY(30px);
 }
 
 #posts .item:hover {
@@ -2115,10 +2138,6 @@ span.error {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-#posts .item .overlay {
-  transition: opacity 0.3s ease;
-}
-
-#posts .item:hover .overlay {
-  opacity: 0.8;
+#posts .item:hover ~ .item {
+  transform: translateY(40px);
 }
