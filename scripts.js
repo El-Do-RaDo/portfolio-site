@@ -45,15 +45,32 @@ $.fn.commentCards = function() {
 
 $('.cards').commentCards();
 
-// Cursor-following effect
+// Swirl Cursor Effect
 $(document).ready(function() {
     const cursor = $('<div class="cursor"></div>');
     $('body').append(cursor);
 
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    const speed = 0.1; // Adjust speed for the swirl effect
+
     $(document).on('mousemove', function(e) {
-        cursor.css({
-            left: e.pageX + 'px',
-            top: e.pageY + 'px'
-        });
+        mouseX = e.pageX;
+        mouseY = e.pageY;
     });
+
+    function animateCursor() {
+        cursorX += (mouseX - cursorX) * speed;
+        cursorY += (mouseY - cursorY) * speed;
+
+        cursor.css({
+            left: cursorX + 'px',
+            top: cursorY + 'px',
+            transform: `translate(-50%, -50%) rotate(${cursorX + cursorY}deg)`
+        });
+
+        requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
 });
