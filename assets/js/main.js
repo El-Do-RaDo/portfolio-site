@@ -117,6 +117,37 @@ class App {
                 }
             })
             .catch(error => console.error('Error loading projects:', error));
+
+        // Initialize Hammer.js for swipe detection
+        const projectsGrid = document.querySelector('.projects__grid');
+        const hammer = new Hammer(projectsGrid);
+
+        hammer.on('swipeleft swiperight', (event) => {
+            const cards = document.querySelectorAll('.projects__grid .card');
+            if (cards.length > 0) {
+                const topCard = cards[0];
+                gsap.to(topCard, {
+                    x: event.type === 'swipeleft' ? '-100%' : '100%',
+                    duration: 0.5,
+                    onComplete: () => {
+                        projectsGrid.appendChild(topCard);
+                        gsap.set(topCard, { x: 0 });
+                        reorderCards();
+                    }
+                });
+            }
+        });
+
+        function reorderCards() {
+            const cards = document.querySelectorAll('.projects__grid .card');
+            cards.forEach((card, index) => {
+                gsap.to(card, {
+                    scale: index === 0 ? 1 : 0.95,
+                    opacity: index === 0 ? 1 : 0.8,
+                    duration: 0.3
+                });
+            });
+        }
     }
 }
 

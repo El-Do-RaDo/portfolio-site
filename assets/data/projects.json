@@ -7,6 +7,41 @@
       },
       {
         "title": "Project 2",
+        "description": "Description of project 1",
+        "link": "http://example.com/project1"
+      },
+      {
+        "title": "Project 3",
+        "description": "Description of project 1",
+        "link": "http://example.com/project1"
+      },
+      {
+        "title": "Project 4",
+        "description": "Description of project 1",
+        "link": "http://example.com/project1"
+      },
+      {
+        "title": "Project 5",
+        "description": "Description of project 1",
+        "link": "http://example.com/project1"
+      },
+      {
+        "title": "Project 6",
+        "description": "Description of project 1",
+        "link": "http://example.com/project1"
+      },
+      {
+        "title": "Project 7",
+        "description": "Description of project 1",
+        "link": "http://example.com/project1"
+      },
+      {
+        "title": "Project 8",
+        "description": "Description of project 1",
+        "link": "http://example.com/project1"
+      },
+      {
+        "title": "Project 9",
         "description": "Description of project 2",
         "link": "http://example.com/project2"
       }
