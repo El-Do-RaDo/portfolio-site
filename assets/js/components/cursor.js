@@ -1,5 +1,5 @@
 // components/loader.js
-export class Loader {
+export class CustomCursor {
     constructor() {
         this.loader = document.createElement('div');
         this.loader.className = 'loader';
