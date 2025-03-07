@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Security Automation Tool",
+        "description": "An automated tool for security testing in CI/CD.",
+        "github": "https://github.com/yourrepo"
+    },
+    {
+        "title": "Cloud Security Analysis",
+        "description": "Monitors cloud infrastructure for security threats.",
+        "github": "https://github.com/yourrepo"
+    }
+]
