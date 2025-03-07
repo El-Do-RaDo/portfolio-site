@@ -77,6 +77,38 @@ class App {
             gsap.from('.hero__title', { duration: 1, y: -50, opacity: 0, ease: 'power3.out' });
             gsap.from('.hero__marquee', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.5 });
         });
+
+        // Fetch and display project cards
+        fetch('./assets/data/projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const projectsGrid = document.querySelector('.projects__grid');
+                data.projects.forEach(project => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+                    card.innerHTML = `
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <a href="${project.link}" target="_blank">View Project</a>
+                    `;
+                    projectsGrid.appendChild(card);
+                });
+
+                // Animate cards
+                gsap.from('.card', {
+                    duration: 1,
+                    y: 50,
+                    opacity: 0,
+                    stagger: 0.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '.projects__grid',
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading projects:', error));
     }
 }
 
