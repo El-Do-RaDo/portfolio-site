@@ -4,6 +4,7 @@ body {
 }
 
 .parallax {
+    position: relative;
     background-image: url('bg.jpg');
     min-height: 100vh;
     background-attachment: fixed;
@@ -51,6 +52,12 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.parallax > .container {
+    position: relative;
+    z-index: 2;
 }
 
 .parallax h1 {
