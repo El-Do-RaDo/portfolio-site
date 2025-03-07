@@ -1,0 +1,14 @@
+[
+    {
+        "title": "3D Visualization Platform",
+        "description": "Interactive 3D visualization system with WebGL",
+        "tech": ["Three.js", "GSAP", "WebGL"],
+        "link": "#"
+    },
+    {
+        "title": "AI Security System",
+        "description": "Machine learning-based threat detection",
+        "tech": ["Python", "TensorFlow", "AWS"],
+        "link": "#"
+    }
+]
