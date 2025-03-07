@@ -44,6 +44,32 @@ class App {
                 });
             });
         });
+
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+
+        // Basic GSAP Animation Example
+        window.addEventListener('load', () => {
+            gsap.from('.hero__title', { duration: 1, y: -50, opacity: 0, ease: 'power3.out' });
+            gsap.from('.hero__marquee', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.5 });
+        });
+
+        // Placeholder for Three.js 3D Effects
+        // const scene = new THREE.Scene();
+        // const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        // const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('.webgl') });
+        // renderer.setSize(window.innerWidth, window.innerHeight);
+        // document.body.appendChild(renderer.domElement);
+
+        // function animate() {
+        //     requestAnimationFrame(animate);
+        //     renderer.render(scene, camera);
+        // }
+        // animate();
     }
 }
 
