@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/style.css">
 
   </head>
-  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200" id="top">
 
     <nav class="unslate_co--site-mobile-menu">
       <div class="close-wrap d-flex">
@@ -75,9 +75,11 @@
                     </li>
                   </ul>
                 </li>
-                <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
+                
                 <li><a href="#about-section" class="nav-link">About</a></li>
+                <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
                 <li><a href="#services-section" class="nav-link">Services</a></li>
+                
               </ul>
             </div>
             <div class="site-logo pos-absolute">
@@ -118,7 +120,7 @@
         </div>
 
 
-        <a href="#portfolio-section" class="mouse-wrap smoothscroll">
+        <a href="#about-section" class="mouse-wrap smoothscroll">
           <span class="mouse">
             <span class="scroll"></span>
           </span>
@@ -146,29 +148,42 @@
               </figure>
             </div>
             <div class="col-lg-4 pr-lg-5">
-              <h3 class="mb-4 heading-h3"><span class="gsap-reveal">We can make it together</span></h3>
-              <p class="lead gsap-reveal">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there <a href="#">live the blind</a> texts. </p>
-              <p class="mb-4 gsap-reveal">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-              <p class="gsap-reveal"><a href="#" class="btn btn-outline-pill btn-custom-light">Download my CV</a></p>
+              <h3 class="mb-4 heading-h3"><span class="gsap-reveal">Let's Build Secure & Resilient Systems Together</span></h3>
+              <p class="lead gsap-reveal">As a DevSecOps Engineer, I specialize in integrating security practices into the DevOps pipeline, ensuring that security is built into applications from the ground up.</p>
+              <p class="mb-4 gsap-reveal">With expertise in cloud security, automation, and continuous integration/deployment, I help organizations build and maintain secure, scalable, and resilient systems while maintaining high development velocity.</p>
+              <p class="gsap-reveal"><a href="Aniket_Sangohi_Resume.pdf" class="btn btn-outline-pill btn-custom-light" download>Download my CV</a></p>
             </div>
           </div>
         </div>
+        
       </div>
 
       <div class="unslate_co--section">
         <div class="container">
-          <div class="owl-carousel logo-slider">
+          <div class="owl-carousel logo-slider" data-items="5" data-margin="30" data-loop="true" data-autoplay="true" data-autoplay-timeout="2000" data-smart-speed="1000" data-dots="false" data-nav="false" data-nav-speed="false" data-r-x-small="2" data-r-x-small-nav="false" data-r-x-small-dots="false" data-r-x-medium="3" data-r-x-medium-nav="false" data-r-x-medium-dots="false" data-r-small="4" data-r-small-nav="false" data-r-small-dots="false" data-r-medium="5" data-r-medium-nav="false" data-r-medium-dots="false">
             <div class="logo-v1 gsap-reveal">
-              <img src="images/logo-google.png" alt="Image" class="img-fluid">
+              <img src="images/logos/aws-logo.png" alt="AWS" class="img-fluid">
             </div>
             <div class="logo-v1 gsap-reveal">
-              <img src="images/logo-aws.png" alt="Image" class="img-fluid">
+              <img src="images/logos/azure-logo.png" alt="Azure" class="img-fluid">
             </div>
             <div class="logo-v1 gsap-reveal">
-              <img src="images/logo-paypal.png" alt="Image" class="img-fluid">
+              <img src="images/logos/kubernetes-logo.png" alt="Kubernetes" class="img-fluid">
             </div>
             <div class="logo-v1 gsap-reveal">
-              <img src="images/logo-adobe.png" alt="Image" class="img-fluid">
+              <img src="images/logos/docker-logo.png" alt="Docker" class="img-fluid">
+            </div>
+            <div class="logo-v1 gsap-reveal">
+              <img src="images/logos/terraform-logo.png" alt="Terraform" class="img-fluid">
+            </div>
+            <div class="logo-v1 gsap-reveal">
+              <img src="images/logos/jenkins-logo.png" alt="Jenkins" class="img-fluid">
+            </div>
+            <div class="logo-v1 gsap-reveal">
+              <img src="images/logos/ansible-logo.png" alt="Ansible" class="img-fluid">
+            </div>
+            <div class="logo-v1 gsap-reveal">
+              <img src="images/logos/prometheus-logo.png" alt="Prometheus" class="img-fluid">
             </div>
           </div>
         </div>
@@ -182,10 +197,12 @@
           <div id="portfolio-single-holder"></div>
 
           <div class="portfolio-wrapper">
+            <div class="section-heading-wrap text-center mb-5">
+              <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Portfolio</span></h2>
+              <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
+            </div>
 
             <div class="d-flex align-items-center mb-4 gsap-reveal gsap-reveal-filter">
-              <h2 class="mr-auto heading-h2"><span class="gsap-reveal">Portfolio</span></h2>
-
               <!-- <a href="#" class="text-white js-filter d-inline-block d-lg-none">Filter</a>
               
               <div class="filter-wrap">
@@ -343,8 +360,8 @@
                 <div class="wrap-icon mb-3">
                   <img src="images/svg/001-options.svg" alt="Image" width="45">
                 </div>
-                <h3>Digital <br> Strategy</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
+                <h3>Security <br> Automation</h3>
+                <p>Implementing automated security testing, vulnerability scanning, and compliance checks throughout the CI/CD pipeline to ensure continuous security validation.</p>
               </div> 
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
@@ -352,8 +369,8 @@
                 <div class="wrap-icon mb-3">
                   <img src="images/svg/002-chat.svg" alt="Icon" width="45">
                 </div>
-                <h3>Web <br> Design</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
+                <h3>Cloud <br> Security</h3>
+                <p>Designing and implementing secure cloud infrastructure using Infrastructure as Code (IaC) with a focus on AWS, Azure, or GCP security best practices.</p>
               </div> 
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
@@ -361,8 +378,8 @@
                 <div class="wrap-icon mb-3">
                   <img src="images/svg/003-contact-book.svg" alt="Image" class="img-fluid" width="45">
                 </div>
-                <h3>User <br> Experience</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
+                <h3>Container <br> Security</h3>
+                <p>Implementing container security best practices, including image scanning, runtime protection, and secure orchestration using Kubernetes security features.</p>
               </div> 
             </div>
 
@@ -371,8 +388,8 @@
                 <div class="wrap-icon mb-3">
                   <img src="images/svg/004-percentage.svg" alt="Image" width="45">
                 </div>
-                <h3>Web <br> Development</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
+                <h3>CI/CD <br> Pipeline Security</h3>
+                <p>Building secure CI/CD pipelines with automated security testing, code analysis, and compliance checks integrated into the development workflow.</p>
               </div> 
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
@@ -380,8 +397,8 @@
                 <div class="wrap-icon mb-3">
                   <img src="images/svg/006-goal.svg" alt="Image" width="45">
                 </div>
-                <h3>WordPress <br> Solutions</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
+                <h3>Security <br> Monitoring</h3>
+                <p>Implementing comprehensive security monitoring and logging solutions using tools like ELK Stack, Prometheus, and Grafana for real-time threat detection.</p>
               </div> 
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
@@ -389,11 +406,38 @@
                 <div class="wrap-icon mb-3">
                   <img src="images/svg/005-line-chart.svg" alt="Image" width="45">
                 </div>
-                <h3>Mobile <br> Applications</h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
+                <h3>Compliance <br> & Governance</h3>
+                <p>Ensuring compliance with security standards (ISO 27001, SOC 2, GDPR) through automated compliance checks and documentation in the development process.</p>
               </div> 
             </div>
 
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/001-options.svg" alt="Image" width="45">
+                </div>
+                <h3>VoIP <br> Services</h3>
+                <p>Designing and implementing secure VoIP solutions with focus on Asterisk, FreePBX, and SIP protocols, ensuring high availability and quality of service.</p>
+              </div> 
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/002-chat.svg" alt="Icon" width="45">
+                </div>
+                <h3>On-Prem <br> Infrastructure</h3>
+                <p>Setting up and maintaining secure on-premises infrastructure including servers, networking, storage solutions, and disaster recovery systems.</p>
+              </div> 
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/003-contact-book.svg" alt="Image" class="img-fluid" width="45">
+                </div>
+                <h3>Cloud <br> Optimization</h3>
+                <p>Optimizing cloud infrastructure following Well-Architected Framework principles for cost efficiency, performance, security, reliability, and operational excellence.</p>
+              </div> 
+            </div>
           </div>
         </div>
       </div>
@@ -405,43 +449,79 @@
             <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
           </div>
 
+          <div class="row gutter-v3">
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/001-options.svg" alt="Image" width="45">
+                </div>
+                <h3>Cloud <br> Security</h3>
+                <p>Expertise in implementing and managing cloud security solutions across AWS, Azure, and GCP platforms.</p>
+              </div> 
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/002-chat.svg" alt="Icon" width="45">
+                </div>
+                <h3>DevSecOps <br> Engineering</h3>
+                <p>Integrating security practices into DevOps pipelines and implementing automated security testing.</p>
+              </div> 
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/003-contact-book.svg" alt="Image" class="img-fluid" width="45">
+                </div>
+                <h3>Solution <br> Architecture</h3>
+                <p>Designing scalable and secure infrastructure solutions with focus on cloud migration and system architecture.</p>
+              </div> 
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="300">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/004-percentage.svg" alt="Image" width="45">
+                </div>
+                <h3>DevOps <br> Engineering</h3>
+                <p>Implementing CI/CD pipelines, infrastructure automation, and performance optimization solutions.</p>
+              </div> 
+            </div>
 
-          <div class="row pt-5">
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="90">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">WordPress</span>
-              </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/005-line-chart.svg" alt="Image" width="45">
+                </div>
+                <h3>Cloud & <br> Infrastructure</h3>
+                <p>Expert in Kubernetes, Docker, Terraform, and Ansible for infrastructure management and automation.</p>
+              </div> 
             </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="99">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">HTML/CSS</span>
-              </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/006-goal.svg" alt="Image" width="45">
+                </div>
+                <h3>Security & <br> Compliance</h3>
+                <p>Implementing security automation, vulnerability management, and compliance frameworks.</p>
+              </div> 
             </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="95">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">jQuery</span>
-              </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/001-options.svg" alt="Image" width="45">
+                </div>
+                <h3>VoIP & <br> Communication</h3>
+                <p>Specialized in Asterisk, FreePBX, and SIP protocol implementation with security focus.</p>
+              </div> 
             </div>
-            <div class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-              <div class="counter-v1 text-center">
-                <span class="number-wrap">
-                  <span class="number number-counter" data-number="100">0</span>
-                  <span class="append-text">%</span>
-                </span>
-                <span class="counter-label">Design</span>
-              </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+              <div class="feature-v1" data-aos="fade-up" data-aos-delay="300">
+                <div class="wrap-icon mb-3">
+                  <img src="images/svg/002-chat.svg" alt="Icon" width="45">
+                </div>
+                <h3>Tools & <br> Technologies</h3>
+                <p>Proficient in ELK Stack, Prometheus, Git, and Linux administration for system management.</p>
+              </div> 
             </div>
           </div>
         </div>
@@ -519,6 +599,7 @@
             <div class="col-md-12">
               <div class="section-header text-center">
                 <h2 class="heading-h2">Get In Touch.</h2>
+                <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
               </div>
             </div>
           </div>

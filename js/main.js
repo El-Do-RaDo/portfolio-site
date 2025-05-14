@@ -22,6 +22,7 @@ jQuery(function($) {
 	contactForm();
 	stickyFillPlugin();
 	animateReveal();
+	smoothScroll();
 
 });
 
@@ -675,4 +676,17 @@ var animateReveal = function() {
 	}
 
 }
+
+var smoothScroll = function() {
+	$('.smoothscroll').on('click', function(e) {
+		e.preventDefault();
+		var target = this.hash;
+		var $target = $(target);
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+		}, 800, 'swing', function() {
+			window.location.hash = target;
+		});
+	});
+};
 
