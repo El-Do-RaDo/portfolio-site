@@ -196,28 +196,32 @@ var siteMenuClone = function() {
 
 var owlCarouselPlugin = function() {
 
+	// Initialize Testimonial Slider
 	$('.testimonial-slider').owlCarousel({
-    center: false,
-    items: 1,
     loop: true,
-    stagePadding: 20,
-  	margin: 10,
-    smartSpeed: 2000,
+    margin: 30,
     autoplay: true,
+    autoplayTimeout: 5000,
     autoplayHoverPause: true,
-    dots: true,
+    smartSpeed: 1000,
     nav: true,
-    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">'],
-
-    responsive:{
-        400:{
-          stagePadding: 20,
-  				margin: 10,
-        },
-        600:{
-          stagePadding: 100,
-  				margin: 50,
-        }
+    navText: [
+      '<i class="icon-arrow-left"></i>',
+      '<i class="icon-arrow-right"></i>'
+    ],
+    responsive: {
+      0: {
+        items: 1,
+        margin: 15
+      },
+      768: {
+        items: 2,
+        margin: 20
+      },
+      992: {
+        items: 3,
+        margin: 30
+      }
     }
 	});
 	owlSingleSlider();

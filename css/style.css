@@ -2342,3 +2342,134 @@ span.error {
     bottom: 15px;
   }
 }
+
+/* Testimonial Section Styles */
+.testimonial-slider {
+  padding: 20px 0;
+}
+
+.testimonial-item {
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-v1 {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.testimonial-v1:hover {
+  transform: scale(0.95);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-v1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(214, 52, 71, 0.1), rgba(0, 123, 255, 0.1));
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.testimonial-v1:hover:before {
+  opacity: 1;
+}
+
+.testimonial-inner-bg {
+  position: relative;
+  padding: 20px 0;
+  z-index: 1;
+}
+
+.testimonial-inner-bg .quote {
+  font-size: 60px;
+  color: #007bff;
+  opacity: 0.2;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  transition: all 0.4s ease;
+}
+
+.testimonial-v1:hover .quote {
+  transform: scale(1.1);
+  opacity: 0.3;
+}
+
+.testimonial-inner-bg blockquote {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  transition: all 0.4s ease;
+}
+
+.testimonial-v1:hover blockquote {
+  transform: translateY(-5px);
+  color: #333;
+}
+
+.testimonial-author-info {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  transition: all 0.4s ease;
+}
+
+.testimonial-v1:hover .testimonial-author-info {
+  border-top-color: rgba(214, 52, 71, 0.2);
+}
+
+.testimonial-author-info img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 3px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  transform: translateZ(0);
+}
+
+.testimonial-v1:hover .testimonial-author-info img {
+  transform: scale(1.1) translateZ(0);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: rgba(214, 52, 71, 0.2);
+}
+
+.testimonial-author-info h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+  transition: all 0.4s ease;
+}
+
+.testimonial-v1:hover .testimonial-author-info h3 {
+  color: #D63447;
+  transform: translateX(5px);
+}
+
+.testimonial-author-info .position {
+  font-size: 14px;
+  color: #007bff;
+  margin-top: 5px;
+  transition: all 0.4s ease;
+}
+
+.testimonial-v1:hover .testimonial-author-info .position {
+  color: #0056b3;
+  transform: translateX(5px);
+}
